@@ -1,13 +1,13 @@
-import type {JSXElement} from "solid-js"
+import {Outlet} from "@solidjs/router"
 
 import ContentLayout from "../../layout/BlogLayout"
 
 
-export default function Blog(): JSXElement {
+export default function Blog() {
   return (
     <ContentLayout>
       <main>
-        Content
+        <Outlet />
       </main>
     </ContentLayout>
   )

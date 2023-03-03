@@ -1,11 +1,14 @@
-import {createSignal, JSXElement} from "solid-js"
+import {createEffect, createSignal} from "solid-js"
 
 import ServiceLayout from "../../layout/ServiceLayout"
+import {updateHeadTags} from "../../signals/siteHeadMeta"
 
 
-export default function Service(): JSXElement {
+export default function Service() {
   const [count, setCount] = createSignal(0)
-
+  createEffect(() => {
+    updateHeadTags({title: "Service"})
+  })
   return (
     <ServiceLayout>
       <main>
