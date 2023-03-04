@@ -3,7 +3,7 @@ import PocketBase, {ListResult, RecordService} from "pocketbase"
 import type {Collections} from "./types"
 
 
-const pb = new PocketBase("http://127.0.0.1:8090")
+const pb = new PocketBase("http://localhost:8090")
 
 export {pb}
 

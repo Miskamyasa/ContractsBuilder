@@ -10,7 +10,7 @@ export default function SiteHeader() {
   const {state} = loaderState
 
   return (
-    <div class="container row overflow-hidden h-14 my-2 lg:my-3 rounded-lg shadow-md bg-zinc-700 text-zinc-100">
+    <header class="container row overflow-hidden h-14 my-2 lg:my-3 rounded-lg shadow-md bg-zinc-700 text-zinc-100">
       <Logo />
       <SiteMenu />
       <div class="flex gap-3">
@@ -23,6 +23,6 @@ export default function SiteHeader() {
         </div>
         <BiRegularLogInCircle size={24} />
       </div>
-    </div>
+    </header>
   )
 }
