@@ -10,3 +10,7 @@
 .row {
   @apply flex justify-between items-center px-2 sm:px-6 lg:px-8
 }
+
+h1 {
+  @apply text-2xl font-bold text-gray-900
+}

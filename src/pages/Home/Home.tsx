@@ -25,18 +25,18 @@ export default function Home() {
     }
   })
 
-  const content = data()
+  let content: ReturnType<typeof data>
 
   return (
     <FullLayout>
       <main class=" text-gray-700 p-8 bg-paper">
-        {content && (
-          <Article>
-            <h1 class="text-2xl font-bold">{content.title}</h1>
-
-          </Article>
-        )}
-
+        <Suspense fallback={<span>...</span>}>
+          {data() && (content = data()) && (
+            <Article>
+              <div innerHTML={content.text} />
+            </Article>
+          )}
+        </Suspense>
         <p class="mt-4">
           <span>We love</span>
           <Suspense fallback={<span>...</span>}>

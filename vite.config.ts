@@ -3,7 +3,6 @@ import solidPlugin from "vite-plugin-solid"
 
 
 export default defineConfig({
-  clearScreen: false,
   plugins: [
     solidPlugin(),
   ],
